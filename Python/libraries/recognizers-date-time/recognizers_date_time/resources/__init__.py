@@ -5,3 +5,4 @@ from .french_date_time import FrenchDateTime
 from .portuguese_date_time import PortugueseDateTime
 from .spanish_date_time import SpanishDateTime
 from .english_time_zone import TimeZoneDefinitions
+from .german_date_time import GermanDateTime

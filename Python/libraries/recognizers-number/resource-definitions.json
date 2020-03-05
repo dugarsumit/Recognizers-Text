@@ -83,6 +83,18 @@
                 "class FrenchNumeric:"
             ],
             "footer": [ "# pylint: enable=line-too-long" ]
+        },
+        {
+            "input": [ "German", "German-Numbers" ],
+            "output": "german_numeric",
+            "header": [
+                "from .base_numbers import BaseNumbers",
+                "# pylint: disable=line-too-long",
+                "",
+                "",
+                "class GermanNumeric:"
+            ],
+            "footer": [ "# pylint: enable=line-too-long" ]
         }
     ]
 }
