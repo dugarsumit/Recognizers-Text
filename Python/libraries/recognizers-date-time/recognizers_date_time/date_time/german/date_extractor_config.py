@@ -130,6 +130,10 @@ class GermanDateExtractorConfiguration(DateExtractorConfiguration):
     def week_day_and_day_regex(self) -> Pattern:
         return self._week_day_and_day_regex
 
+    @property
+    def month_regex(self) -> Pattern:
+        return self._month_regex
+
     def __init__(self):
         self._check_both_before_after = False
         if GermanDateTime.DefaultLanguageFallback == Constants.DEFAULT_LANGUAGE_FALLBACK_DMY:
@@ -232,3 +236,6 @@ class GermanDateExtractorConfiguration(DateExtractorConfiguration):
             GermanDateTime.WeekDayStart
         )
         self._check_both_before_after = GermanDateTime.CheckBothBeforeAfter
+        self._month_regex = RegExpUtility.get_safe_reg_exp(
+            GermanDateTime.MonthRegex
+        )
