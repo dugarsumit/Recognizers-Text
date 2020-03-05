@@ -65,7 +65,7 @@ class GermanDateTime:
     WhichWeekRegex = f'\\b(week)(\\s*)(?<number>5[0-3]|[1-4]\\d|0?[1-9])\\b'
     WeekOfRegex = f'(die\\s+)?(woche)(\\s+des)'
     MonthOfRegex = f'(monat)(\\s*)(des)'
-    MonthRegex = f'(?<month>april|apr\\.|august|aug\\.|dezember|dez\\.|februar|feber|feb\\.|januar|j[äa]nner|j[äa]n\\.|juli|julei|jul\\.|jun[io]|jun\\.|märz|mai|november|nov\\.|oktober|okt\\.|september|sept?\\.)'
+    MonthRegex = f'(?<month>apr(il)?|aug(ust)?|dez(ember)?|feb(ruar)?|feber|jan(uar)?|j[äa]n|jul(i)?|julei?|june?|jun(io)|märz?|mai|may|nov(ember)?|okt(ober)?|sept(ember)?|sept?)'
     DateYearRegex = f'(?<year>{BaseDateTime.FourDigitYearRegex}|{TwoDigitYearRegex})'
     OnRegex = f'(?<=\\bam\\s+)({DayRegex}s?)\\b'
     RelaxedOnRegex = f'(?<=\\b(am|an dem)\\s+)((?<day>10|11|12|13|14|15|16|17|18|19|1|20|21|22|23|24|25|26|27|28|29|2|30|31|3|4|5|6|7|8|9)([\\.]))'

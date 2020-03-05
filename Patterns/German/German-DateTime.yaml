@@ -130,7 +130,7 @@ WeekOfRegex: !simpleRegex
 MonthOfRegex: !simpleRegex
   def: (monat)(\s*)(des)
 MonthRegex: !simpleRegex
-  def: (?<month>april|apr\.|august|aug\.|dezember|dez\.|februar|feber|feb\.|januar|j[äa]nner|j[äa]n\.|juli|julei|jul\.|jun[io]|jun\.|märz|mai|november|nov\.|oktober|okt\.|september|sept?\.)
+  def: (?<month>apr(il)?|aug(ust)?|dez(ember)?|feb(ruar)?|feber|jan(uar)?|j[äa]n|jul(i)?|julei?|june?|jun(io)|märz?|mai|may|nov(ember)?|okt(ober)?|sept(ember)?|sept?)
 #This is a look-behind assertion. Some cases should extract two digits as year like 11/25/16, where 16 means 2016. 
 #The assertion determines if not connected with am/pm or hour separator (:), which should be a time.
 DateYearRegex: !nestedRegex
