@@ -4,3 +4,4 @@ from .english_numeric_with_unit import EnglishNumericWithUnit
 from .french_numeric_with_unit import FrenchNumericWithUnit
 from .portuguese_numeric_with_unit import PortugueseNumericWithUnit
 from .spanish_numeric_with_unit import SpanishNumericWithUnit
+from .german_numeric_with_unit import GermanNumericWithUnit

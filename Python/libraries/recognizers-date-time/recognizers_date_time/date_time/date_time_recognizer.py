@@ -16,6 +16,9 @@ from .chinese.merged_parser import ChineseMergedParser
 from .french.common_configs import FrenchCommonDateTimeParserConfiguration
 from .french.merged_extractor_config import FrenchMergedExtractorConfiguration
 from .french.merged_parser_config import FrenchMergedParserConfiguration
+from .german.common_configs import GermanCommonDateTimeParserConfiguration
+from .german.merged_extractor_config import GermanMergedExtractorConfiguration
+from .german.merged_parser_config import GermanMergedParserConfiguration
 
 
 class DateTimeRecognizer(Recognizer[DateTimeOptions]):
@@ -53,6 +56,12 @@ class DateTimeRecognizer(Recognizer[DateTimeOptions]):
         self.register_model('DateTimeModel', Culture.Portuguese, lambda options: DateTimeModel(
             None,
             None
+        ))
+
+        self.register_model('DateTimeModel', Culture.German, lambda options: DateTimeModel(
+            BaseMergedParser(GermanMergedParserConfiguration(
+                GermanCommonDateTimeParserConfiguration()), options),
+            BaseMergedExtractor(GermanMergedExtractorConfiguration(), options)
         ))
 
     def get_datetime_model(self, culture: str = None, fallback_to_default_culture: bool = True) -> Model:

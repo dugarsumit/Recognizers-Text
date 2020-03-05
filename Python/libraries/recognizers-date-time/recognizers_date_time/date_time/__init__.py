@@ -20,3 +20,4 @@ from .english import *
 from .spanish import *
 from .chinese import *
 from .french import *
+from .german import *

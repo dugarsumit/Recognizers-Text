@@ -5,3 +5,4 @@ from .french_numeric import FrenchNumeric
 from .portuguese_numeric import PortugueseNumeric
 from .spanish_numeric import SpanishNumeric
 from .japanese_numeric import JapaneseNumeric
+from .german_numeric import GermanNumeric

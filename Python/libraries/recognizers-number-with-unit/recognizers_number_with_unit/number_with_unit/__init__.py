@@ -4,3 +4,4 @@ from .models import *
 from .extractors import *
 from .parsers import *
 from .chinese import *
+from .german import *
